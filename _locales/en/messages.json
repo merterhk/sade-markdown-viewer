@@ -1,0 +1,8 @@
+{
+  "extensionName": {
+    "message": "Sade Markdown Viewer"
+  },
+  "extensionDescription": {
+    "message": "Displays Markdown files in Firefox as clean, readable pages with light and dark themes."
+  }
+}
