@@ -28,12 +28,16 @@ Open or drag a `.md` file into Firefox. The button in the upper-right corner cyc
 - Remembers the selected theme
 - English and Turkish localization, with English as the fallback
 - Works with local Markdown files and direct Markdown URLs
+- Renders tables with left, center, and right column alignment
+- Uses the small [markdown-js](https://github.com/evilstreak/markdown-js/) engine locally with no runtime downloads
 - No tracking, advertising, accounts, or external services
 - No build dependencies
 
 ## Supported Markdown
 
-Headings, paragraphs, bold and italic text, strikethrough, links, remote images, ordered and unordered lists, blockquotes, horizontal rules, inline code, and fenced code blocks.
+The standard Markdown features supported by markdown-js, plus Maruku tables with column alignment.
+
+markdown-js 0.5.0 is included under the MIT license; see [`vendor/markdown-js/LICENSE`](vendor/markdown-js/LICENSE).
 
 ## Build the store package
 
