@@ -9,6 +9,41 @@
   const source = sourceNode.textContent || "";
   if (!source.trim()) return;
 
+  const sanitizeRenderedMarkdown = (rendered) => {
+    const allowedAttributes = {
+      a: new Set(["href", "title"]),
+      img: new Set(["src", "alt", "title"]),
+      th: new Set(["align"]),
+      td: new Set(["align"])
+    };
+    const safeProtocols = {
+      href: new Set(["http:", "https:", "file:", "mailto:"]),
+      src: new Set(["http:", "https:", "file:"])
+    };
+
+    for (const element of rendered.body.querySelectorAll("*")) {
+      const allowed = allowedAttributes[element.localName] || new Set();
+      for (const attribute of [...element.attributes]) {
+        if (!allowed.has(attribute.name)) element.removeAttribute(attribute.name);
+      }
+      for (const attribute of ["href", "src"]) {
+        if (!element.hasAttribute(attribute)) continue;
+        try {
+          const protocol = new URL(element.getAttribute(attribute), location.href).protocol;
+          if (!safeProtocols[attribute].has(protocol)) element.removeAttribute(attribute);
+        } catch {
+          element.removeAttribute(attribute);
+        }
+      }
+    }
+
+    for (const link of rendered.body.querySelectorAll("a")) {
+      link.target = "_blank";
+      link.rel = "noreferrer";
+    }
+    for (const image of rendered.body.querySelectorAll("img")) image.loading = "lazy";
+  };
+
   document.documentElement.dataset.markdownViewer = "true";
   const saved = await browser.storage.local.get("theme");
   let theme = saved.theme || "system";
@@ -46,7 +81,14 @@
   };
 
   document.querySelector(".viewer-file").textContent = document.title;
-  const rendered = new DOMParser().parseFromString(window.simpleMarkdown.render(source), "text/html");
+  const rendered = new DOMParser().parseFromString(window.markdown.toHTML(source, "Maruku"), "text/html");
+  sanitizeRenderedMarkdown(rendered);
+  for (const table of rendered.body.querySelectorAll("table")) {
+    const wrapper = rendered.createElement("div");
+    wrapper.className = "table-scroll";
+    table.before(wrapper);
+    wrapper.append(table);
+  }
   document.querySelector(".markdown-body").replaceChildren(...rendered.body.childNodes);
   themeButton.addEventListener("click", async () => {
     theme = theme === "system" ? "light" : theme === "light" ? "dark" : "system";
