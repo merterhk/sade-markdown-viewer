@@ -33,6 +33,12 @@ Open or drag a `.md` file into Firefox. The button in the upper-right corner cyc
 - No tracking, advertising, accounts, or external services
 - No build dependencies
 
+## Changelog
+
+### 1.0.2
+
+- Added a first-run permission request for accessing local Markdown files.
+
 ## Supported Markdown
 
 The standard Markdown features supported by markdown-js, plus Maruku tables with column alignment.
