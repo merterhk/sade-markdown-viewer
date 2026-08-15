@@ -4,26 +4,5 @@
   },
   "extensionDescription": {
     "message": "Displays Markdown files in Firefox as clean, readable pages with light and dark themes."
-  },
-  "permissionTitle": {
-    "message": "Open local Markdown files"
-  },
-  "permissionDescription": {
-    "message": "Firefox needs your one-time approval to access files on your computer. The extension only displays Markdown files that you open in the browser."
-  },
-  "permissionButton": {
-    "message": "Allow local file access"
-  },
-  "permissionPrivacy": {
-    "message": "Your files never leave your computer."
-  },
-  "permissionGranted": {
-    "message": "Ready! You can now open .md and .markdown files with Firefox."
-  },
-  "permissionDenied": {
-    "message": "Permission was not granted. You can try the button again."
-  },
-  "permissionError": {
-    "message": "There was a problem requesting permission. You can enable local file access in Firefox's extension settings."
   }
 }

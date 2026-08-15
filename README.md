@@ -35,6 +35,10 @@ Open or drag a `.md` file into Firefox. The button in the upper-right corner cyc
 
 ## Changelog
 
+### 1.0.3
+
+- Removed the ineffective duplicate permission prompt. Firefox 153 requires local file access to be enabled from the extension's **Permissions and Data** settings.
+
 ### 1.0.2
 
 - Added a first-run permission request for accessing local Markdown files.
