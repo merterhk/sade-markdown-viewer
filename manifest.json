@@ -31,7 +31,7 @@
         "*://*/*.markdown?*"
       ],
       "js": [
-        "markdown.js",
+        "vendor/markdown-js/markdown.min.js",
         "viewer.js"
       ],
       "css": [

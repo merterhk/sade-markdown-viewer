@@ -50,6 +50,13 @@ html[data-markdown-viewer="true"], html[data-markdown-viewer="true"] body {
 .markdown-body blockquote { margin: 1.3em 0; padding: .1em 0 .1em 1.2em; border-left: 3px solid var(--border); color: var(--muted); }
 .markdown-body hr { margin: 2.2em 0; border: 0; border-top: 1px solid var(--border); }
 .markdown-body li + li { margin-top: .25em; }
+.markdown-body .table-scroll { overflow-x: auto; margin: 1.4em 0; }
+.markdown-body table { width: 100%; border-collapse: collapse; font-size: .95em; }
+.markdown-body th, .markdown-body td { padding: .6em .8em; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+.markdown-body th { background: var(--code); font-weight: 650; }
+.markdown-body tbody tr:nth-child(even) { background: color-mix(in srgb, var(--code) 45%, transparent); }
+.markdown-body [align="center"] { text-align: center; }
+.markdown-body [align="right"] { text-align: right; }
 
 @media (max-width: 560px) {
   .theme-name { display: none; }
