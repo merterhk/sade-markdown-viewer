@@ -31,6 +31,12 @@ Open or drag a `.md` file into Firefox. The button in the upper-right corner cyc
 - No tracking, advertising, accounts, or external services
 - No build dependencies
 
+## Changelog
+
+### 1.0.2
+
+- Added a first-run permission request for accessing local Markdown files.
+
 ## Supported Markdown
 
 Headings, paragraphs, bold and italic text, strikethrough, links, remote images, ordered and unordered lists, blockquotes, horizontal rules, inline code, and fenced code blocks.
