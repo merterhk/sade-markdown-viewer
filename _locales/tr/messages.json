@@ -4,26 +4,5 @@
   },
   "extensionDescription": {
     "message": "Markdown dosyalarını Firefox'ta açık ve koyu temalı, sade ve okunaklı sayfalar olarak gösterir."
-  },
-  "permissionTitle": {
-    "message": "Yerel Markdown dosyalarını açın"
-  },
-  "permissionDescription": {
-    "message": "Firefox, bilgisayarınızdaki dosyalara erişim için bir defalık onayınızı istiyor. Eklenti yalnızca tarayıcıda açtığınız Markdown dosyalarını görüntüler."
-  },
-  "permissionButton": {
-    "message": "Yerel dosya erişimine izin ver"
-  },
-  "permissionPrivacy": {
-    "message": "Dosyalarınız bilgisayarınızdan çıkmaz."
-  },
-  "permissionGranted": {
-    "message": "Hazır! Artık .md ve .markdown dosyalarını Firefox ile açabilirsiniz."
-  },
-  "permissionDenied": {
-    "message": "İzin verilmedi. Dilerseniz düğmeye yeniden basabilirsiniz."
-  },
-  "permissionError": {
-    "message": "İzin istenirken bir sorun oluştu. Firefox eklenti ayarlarından yerel dosya erişimini açabilirsiniz."
   }
 }
